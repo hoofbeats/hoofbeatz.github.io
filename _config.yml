@@ -1,0 +1,40 @@
+title: hoofbeats
+email: hoofbeats@domain.com
+description: MedEd for the masses
+baseurl: ""
+url: "http://hoofbeats.github.io"
+twitter_username: HoofbeatsHealth
+github_username:  Hoofbeats
+
+# Build settings
+sass:
+  sass_dir:  _sass
+  style:  compressed
+
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.babel.js
+  - .babelrc
+  - validate
+  - .gitignore
+  - README.md
+  - LICENSE
+  - readme.md
+  - bundle
+  - src
+  - CNAME
+  - google*.html
+  - bower.json
+  - package.json
+  - script
+  - sass
+  - scss
+  - media
+  - ".bundle"
+  - vendor
+  - node_modules
+  - dev
