@@ -1,0 +1,21 @@
+<header class="site-header wrapper" role="banner">
+
+  <div class="container right">
+    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    <nav class="site-nav">
+      <span class="menu-icon">
+        {% include menu-hamburger.svg %}
+      </span>
+
+      <div class="trigger">
+        {% for my_page in site.pages %}
+          {% if my_page.nav-display %}
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.nav-display | escape }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+
+  </div>
+
+</header>

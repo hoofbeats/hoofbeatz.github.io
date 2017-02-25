@@ -1,19 +1,33 @@
 title: hoofbeats
 email: hoofbeats@domain.com
-description: MedEd for the masses
+description: Understanding your healthcare and technology the evidenced-based way.
+site-tagline: MedEd for the masses
+site-quote: "When you hear Hoofbeats, think Horses, not Zebras."
 baseurl: ""
-url: "http://hoofbeats.github.io"
+url: "https://hoofbeats.github.io"
 twitter_username: HoofbeatsHealth
-github_username:  Hoofbeats
+github_username:  hoofbeats
 
-# Build settings
+# build settings
+collections:
+  - graphics
+
+excerpt_separator:  <!-- excerpt -->
+permalink:  pretty
+show_drafts:  false
+markdown:  kramdown
+kramdown:
+  parse_block_html:  true
+  input:  GFM
+
 sass:
   sass_dir:  _sass
   style:  compressed
 
-markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -37,4 +51,6 @@ exclude:
   - ".bundle"
   - vendor
   - node_modules
+  - _drafts
+  - _references
   - dev

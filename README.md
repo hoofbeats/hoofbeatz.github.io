@@ -1,5 +1,3 @@
-<style>ol ul {list-style-type: disc;}ul ul {list-style-type: none;}</style>
-
 ## A static, AMP-formatted site
 
 ### Installation
