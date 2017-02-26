@@ -10,17 +10,42 @@
 
 .site-footer
   border-top: 1px solid $grey-color-light
-  padding: $spacing-unit 0
 
 .contact-list,
 .social-media-list
   list-style: none
   margin-left: 0
+  margin-bottom: 0
+
+  .twitter:hover
+    svg path
+      fill: $twitter
+  .github:hover
+    svg path
+      fill: $grey-300
+  .facebook:hover
+    svg path
+      fill: $facebook
+
+  li
+    margin-bottom: 0.1em
+    padding: 0.2em 0.5em
+    .icon
+      svg
+        width: 1rem
+        height: 1rem
+    a
+      text-decoration: none
+
+  .username
+    letter-spacing: 0.08em
+    margin-left: 0.4em
+
 
 .footer-col-wrapper
   display: flex
   justify-content: space-around
-  font-size: $small-font-size
+  font-size: 0.7rem
   //color: $grey-color
   //margin-left: -$spacing-unit / 2
   @extend %clearfix
@@ -29,8 +54,8 @@
     flex-wrap: wrap
 
 .footer-col
-  margin-bottom: $spacing-unit / 2
-  padding-left: $spacing-unit / 2
+  margin-bottom: 0.5rem
+  padding-left: 0.5em
   min-width: 10em
   p
     display: block
