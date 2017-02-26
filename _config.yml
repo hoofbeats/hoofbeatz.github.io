@@ -51,6 +51,7 @@ exclude:
   - ".bundle"
   - vendor
   - node_modules
+  - bower_components
   - _drafts
-  - _references
+  - references
   - dev

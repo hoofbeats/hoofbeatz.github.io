@@ -1,33 +1,30 @@
-_references
+references
+dev
 _drafts
-.DS_Store
-_site
-.bundle
-Gemfile.lock
+google*.html
 /html
 /md
-.sass-cache
-/.jekyll-metadata
-.jekyll-metadata
 /vendor
-node_modules
-/node_modules
 comments.json
 /tmp
 /public/storage
 .env
 /spec/examples.txt
-google*.html
 
 ### Jekyll ###
+_site
 _site/
 .sass-cache/
 .jekyll-metadata
+/.jekyll-metadata
 scripts/
-Gemfile.lock
 .publish/
 css/
-dev
+
+
+### Ruby ###
+Gemfile.lock
+.bundle
 
 ### Always-ignore files and folders ###
 *.diff
@@ -52,10 +49,13 @@ dev
 *.zip
 
 ### Packages ###
+node_modules
 node_modules/
+/node_modules
 bower_components
 
 ### Sass ###
+.sass-cache
 .sass-cache/
 *.css.map
 
@@ -63,6 +63,7 @@ bower_components
 *~
 
 ### OSX ###
+.DS_Store
 *.DS_Store
 .AppleDouble
 .LSOverride
