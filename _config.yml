@@ -1,4 +1,4 @@
-title: hoofbeats
+title: Hoofbeats Health
 email: hoofbeats@domain.com
 description: Understanding your healthcare and technology the evidenced-based way.
 site-tagline: MedEd for the masses
@@ -7,6 +7,9 @@ baseurl: ""
 url: "https://hoofbeats.github.io"
 twitter_username: HoofbeatsHealth
 github_username:  hoofbeats
+
+# assets
+favicon: /assets/images/favicon.ico
 
 # build settings
 collections:
