@@ -12,12 +12,15 @@ dl, dd, ol, ul, figure
   clear: both
 
 body
+  //display: flex
+  //justify-content: center
+  //align-items: center
+  background-color: $background-color
+  color: $text-color
   font-family: $base-font-family
   font-weight: $base-font-weight
   font-size: $base-font-size
   line-height: $base-line-height
-  color: $text-color
-  background-color: $background-color
   -webkit-text-size-adjust: 100%
   -webkit-font-feature-settings: "kern" 1
   -moz-font-feature-settings: "kern" 1
@@ -25,12 +28,35 @@ body
   font-feature-settings: "kern" 1
   font-kerning: normal
 
+//body
+  background:
+    color: $flat-white
+  font:
+    family: $font-karla
+    weight: 300
+  color: $primary-dark
+  margin: 0 auto
+  text-align: center
+  padding: 0
+  text-rendering: optimizelegibility
+  -webkit-font-smoothing: antialiased
+  -moz-font-feature-settings: "liga=1, dlig=1"
+  -ms-font-feature-settings: "liga", "dlig"
+  -webkit-font-feature-settings: "liga", "dlig"
+  -o-font-feature-settings: "liga", "dlig"
+  font-feature-settings: "liga", "dlig"
+  -webkit-backface-visibility: hidden
+
 // VERTICAL RHYTHM
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm
-  margin-bottom: $spacing-unit / 2
+  margin-bottom: $rs
+
+// FLUID TYPOGRAPHY
+\:root
+  font-size: 100%
 
 img
   max-width: 100%
@@ -53,9 +79,16 @@ li
 h1, h2, h3, h4, h5, h6
   font-weight: $base-font-weight
 
+//h1, h2, h3
+  font-weight: $base-font-weight
+
+//h1-h3
+  font-weight: $heading-primary-weight
+
 a
   color: $brand-color
   text-decoration: none
+  border-bottom: none
 
   &:visited
     color: darken($brand-color, 15%)

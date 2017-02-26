@@ -1,20 +1,31 @@
 // FONTS
 @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700|Montserrat:300,400,700,900|Source+Sans+Pro:200,300,300i,400,700')
 
+// REUSEABLE SIZES (em)
+$rs: 16px
+$size1-2: 0.03125em
+$size1: 0.0625em
+$size2: 0.125em
+$size3: 0.1875em
+$size5: 5 * $size1
+$size10: 2 * 0.3125em
+$size20: 2 * $size10
+$size30: 3 * $size10
+$size50: 5* $size10
+$local-max-width: 45em
+
 // VARIABLES – Theme: Minima
 $font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif
 $font-sss: "Source Sans Pro", $font-sans
 $font-mont: "Montserrat", $font-sans
 $font-karla: "Karla", $font-sans
-$base-font-size:   16px !default
+$base-font-size:   $rs !default
 $base-font-weight: 300 !default
+$heading-primary-weight: 900
+$heading-secondary-weight: 700
 $small-font-size:  $base-font-size * 0.875 !default
 $base-line-height: 1.5 !default
 $spacing-unit:     2em !default
-
-$text-color:       black !default
-$background-color: white !default
-$brand-color:      red !default
 
 $grey-color:       #828282 !default
 $grey-color-light: lighten($grey-color, 40%) !default
@@ -26,6 +37,7 @@ $content-width:    800px !default
 $on-palm:          600px !default
 $on-laptop:        800px !default
 
+// MIX-INs - RESPONSIVE DESIGN
 // Use media queries like this:
 // @include media-query($on-palm)
 //   .wrapper
@@ -36,25 +48,15 @@ $on-laptop:        800px !default
   @media screen and (max-width: $device)
     @content
 
+//@mixin respond-to($breakpoint)
+  @media only screen and (max-width: $breakpoint + px)
+    @content
 
-@import "palette-material-design"
-
-@import "palette-social"
-
-// VARIABLES – Theme: Hoofbeats
-$hoofbeats-green: #79AC7D
-$sherpa-flatorange: #ef6841
-$grey-color: #828282
-$grey-meta: #b3b3b1
-$grey-border: #f2f2f0
-$flat-white: darken(white, 2%)
-$grey-dark: #333332
-$grey-text: #141414
-$flat-black: #1C2021
-$grey-icon: $grey-color
-$grey-footer: lighten($grey-meta, 10%)
-$frosted: rgba(white,0.8)
-$dark-frost: rgba($grey-border, 0.8)
+// IMPORT COLOR PALETTES
+@import "variables-palette-material-design"
+@import "variables-palette-social"
+// THEME PALETTE – Site: Hoofbeats
+@import "variables-palette-hoofbeats"
 
 $primary-dark: $nuzzel-bg
 $primary-light: $hoofbeats-green
@@ -67,7 +69,7 @@ $link-underline: hsla(0,0%,0%,0.4)
 $link-underline-light: hsla(0,0%,100%,0.3)
 
 $text-color:       $grey-900 !default
-$background-color: $green-50 !default
+$background-color: $green-50-lightened !default
 $brand-color:      $hoofbeats-green !default
 $base-font-family: $font-sss !default
 

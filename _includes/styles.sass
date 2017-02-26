@@ -1,13 +1,24 @@
 @charset "UTF-8"
 
-// Import partials from the `minima` theme.
+// SITE VARIABLES
 @import "variables"
+
+// Import partials from the `minima` theme until all old of theme's partials are converted to SASS
 @import "minima"
+
+// BASE imports
 @import "base"
+@import "typography"
+
+// LAYOUTS
 @import "layout"
+@import "posts"
+@import "graphics"
+
+// AMP
+@import "amp"
+
+// SECTIONS
 //@import "header"
 @import "header-hamburger"
 @import "footer"
-@import "posts"
-@import "graphics"
-@import "typography"
