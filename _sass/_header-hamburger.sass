@@ -17,7 +17,7 @@
     family: $font-sss
     size: 2.25rem
     weight: 700
-  color: lighten($primary-light, 0.2)
+  color: lighten($primary-light, 10%)
   //line-height: 3.5
   letter-spacing: 0.005em
   margin-bottom: 0
@@ -28,7 +28,7 @@
 
   &,
   &:visited
-    color: lighten($primary-light, 0.1)
+    color: lighten($primary-light, 5%)
 
 .right
   float: right
@@ -51,7 +51,7 @@
     text-transform: uppercase
     font:
       family: $font-mont
-      size: 0.75rem
+      size: 0.85rem
       weight: 700
     letter-spacing: 0.08em
     &:hover
@@ -66,9 +66,9 @@
     position: absolute
     top: 9px
     right: $spacing-unit / 2
-    background-color: $frosted
+    //background-color: $frosted
     //border: 1px solid $grey-color-light
-    border-radius: 0.25em
+    border-radius: 0.2em
     text-align: right
 
     .menu-icon
@@ -86,22 +86,25 @@
     .trigger
       clear: both
       display: none
-      border-radius: 0.25em
-      background-color: $frosted
+      border-radius: 0.2em
+      background-color: $dark-frost
 
     &:hover .trigger
       display: block
-      padding-bottom: 5px
       position: absolute
-      bottom: 2.5em
+      bottom: 2.25em
       right: 0.5em
-
 
     .page-link
       display: block
-      padding: 0.6em 0.8em
+      border-radius: 0
+      padding: 0.6em 0.5em 0.6em 1em
+      color: $grey-900
+      opacity: 0.87
+
+      &:first-child, &:last-child
+        border-radius: 0.2em
 
       &:not(:last-child)
         margin-right: 0
-
-      margin-left: 1em
+        margin-bottom: 0
