@@ -23,3 +23,9 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-seo-tag"
 end
+
+
+# Live Reload for local development
+# group :development do
+#  gem 'guard-shell'
+# end

@@ -5,6 +5,8 @@
   <!-- /END -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  {% include head/scripts-amp.html %}
+  {% include head/style-amp.html %}
 
   {% include head/_meta.html %}
   {% include head/_meta-google.html %}
@@ -12,8 +14,6 @@
 
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   {% include head/script-twitter.html %}
-  {% include head/scripts-amp.html %}
-  {% include head/style-amp.html %}
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}

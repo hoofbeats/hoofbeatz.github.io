@@ -5,8 +5,8 @@ google*.html
 /html
 /md
 /vendor
-comments.json
 /tmp
+tmp/
 /public/storage
 .env
 /spec/examples.txt
@@ -20,7 +20,7 @@ _site/
 scripts/
 .publish/
 css/
-
+comments.json
 
 ### Ruby ###
 Gemfile.lock
@@ -53,6 +53,7 @@ node_modules
 node_modules/
 /node_modules
 bower_components
+npm-debug.log
 
 ### Sass ###
 .sass-cache

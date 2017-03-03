@@ -33,28 +33,29 @@ gems:
   - jekyll-seo-tag
 
 exclude:
+  - node_modules
+  - LICENSE
+  - package.json
+  - README.md
   - Gemfile
-  - Gemfile.lock
   - gulpfile.babel.js
   - .babelrc
-  - validate
   - .gitignore
-  - README.md
-  - LICENSE
-  - readme.md
-  - bundle
-  - src
+  - sass
+  - _sass
+  - scss
+  - validate
   - CNAME
+  - Gemfile.lock
   - google*.html
   - bower.json
-  - package.json
+  - bundle
+  - src
   - script
-  - sass
   - scss
   - media
   - ".bundle"
   - vendor
-  - node_modules
   - bower_components
   - _drafts
   - references
