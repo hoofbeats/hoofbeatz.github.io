@@ -8,94 +8,120 @@
   //border-top: 5px solid $grey-color-dark
   //border-bottom: 1px solid $grey-color-light
   min-height: 3.5em
+  min-width: 20em
 
   // Positioning context for the mobile navigation icon
-  position: relative
+    position: relative
 
-.site-title
-  font:
-    family: $font-sss
-    size: 2.25rem
-    weight: 700
-  color: lighten($primary-light, 0.2)
-  //line-height: 3.5
-  letter-spacing: 0.005em
-  margin-bottom: 0
-  //float: left
-  position: absolute
-  left: 0.25em
-  bottom: 0
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: nowrap
+    //float: left
 
-  &,
-  &:visited
-    color: lighten($primary-light, 0.1)
-
-.right
-  float: right
-  padding-right: 2em
-  padding-left: 0
-.left
-  float: left
-  padding-left: 2em
-  padding-right: 0
-
-.site-nav
-  line-height: 3.5em
-
-  .menu-icon
-    display: none
-
-  .page-link
-    color: $primary-dark
-    line-height: $base-line-height
-    text-transform: uppercase
-    font:
-      family: $font-mont
-      size: 0.7rem
+  .site-title
+    background-image: url({{site.logo-steth_title}})
+    background-clip: border-box
+    background-size: contain
+    background-repeat: no-repeat
+    width: 3.5rem
+    height: 3.5rem
+    //font:
+      family: $font-sss
+      size: 1.4rem
       weight: 700
-    letter-spacing: 0.02em
-    &:hover
-      text-decoration: none
-      background-color: transparentize($grey-100, 0.2)
+    //letter-spacing: 0.005em
+    //text-decoration: none
+    //color: lighten($primary-light, 10%)
+    //line-height: 3.5
+    margin-bottom: 0
+    margin: 0
+    padding: 0
+    //float: left
+    //position: absolute
+    //left: 0.25em
+    //bottom: 0.25em
 
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child)
-      margin-right: 1.25em
+    &,
+    &:visited
+      color: lighten($primary-light, 5%)
 
-  @include media-query($on-palm)
-    position: absolute
-    top: 9px
-    right: $spacing-unit / 2
-    background-color: $frosted
-    //border: 1px solid $grey-color-light
-    border-radius: 5px
-    text-align: right
+    @include mobile-first($on-mobile-medium)
+      width: 20vw
+      background-image: url({{site.logo-title}})
 
-    .menu-icon
-      display: block
-      float: right
-      width: 36px
-      height: 26px
-      line-height: 0
-      padding-top: 10px
-      text-align: center
 
-      > svg path
-        fill: $grey-color-dark
+.site-header
+  #navbar
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: nowrap
+    //height: 3.5rem
+    //line-height: 3.5
+    justify-content: space-around
 
-    .trigger
-      clear: both
-      display: none
-
-    &:hover .trigger
-      display: block
-      padding-bottom: 5px
+    button
+      margin: 0
+      padding: 1rem 0.2rem
+      color: white
+      background-color: rgba(0,0,0,0)
+      border: 0
 
     .page-link
-      display: block
-      padding: 5px 10px
+      color: $grey-100
+      line-height: 2.5
+      text-decoration: none
+      color: white
+      margin: 0 auto
+      padding: 1rem 0.2rem
+      text-transform: uppercase
+      font:
+        family: $font-mont
+        size: 0.65rem
+        weight: 700
+      letter-spacing: 0.02em
+      &:hover
+        text-decoration: none
+        background-color: transparentize($grey-100, 0.2)
 
-      &:not(:last-child)
-        margin-right: 0
+      // Gaps between nav items, but not on the last one
+      //&:not(:last-child)
+        margin-right: 1.25em
 
-      margin-left: 20px
+    @include media-query($on-palm)
+      //position: absolute
+      //top: 9px
+      //right: $spacing-unit / 2
+      //background-color: $frosted
+      //border: 1px solid $grey-color-light
+      //border-radius: 5px
+      //text-align: right
+
+      //.menu-icon
+        display: block
+        float: right
+        width: 36px
+        height: 26px
+        line-height: 0
+        padding-top: 10px
+        text-align: center
+
+        //> svg path
+          fill: $grey-color-dark
+
+      .trigger
+        clear: both
+        display: none
+
+      &:hover .trigger
+        display: block
+        padding-bottom: 5px
+
+      //.page-link
+        display: block
+        padding: 5px 10px
+        &:not(:last-child)
+          margin-right: 0
+        margin-left: 20px

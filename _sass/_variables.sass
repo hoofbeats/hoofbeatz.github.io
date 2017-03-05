@@ -15,10 +15,6 @@ $size50: 5* $size10
 $local-max-width: 45em
 
 // VARIABLES – Theme: Minima
-$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-sss: "Source Sans Pro", $font-sans
-$font-mont: "Montserrat", $font-sans
-$font-karla: "Karla", $font-sans
 $base-font-size:   $rs !default
 $base-font-weight: 300 !default
 $heading-primary-weight: 900
@@ -33,9 +29,11 @@ $grey-color-dark:  darken($grey-color, 25%) !default
 
 // Width of the content area
 $content-width:    800px !default
-
+$on-mobile-medium: 475px
 $on-palm:          600px !default
+$on-table:         768px
 $on-laptop:        800px !default
+$on-laptop-wide:   1100px
 
 // MIX-INs - RESPONSIVE DESIGN
 // Use media queries like this:
@@ -48,6 +46,10 @@ $on-laptop:        800px !default
   @media screen and (max-width: $device)
     @content
 
+@mixin mobile-first($device)
+  @media screen and (min-width: $device)
+    @content
+
 //@mixin respond-to($breakpoint)
   @media only screen and (max-width: $breakpoint + px)
     @content
@@ -55,6 +57,7 @@ $on-laptop:        800px !default
 // IMPORT COLOR PALETTES
 @import "variables-palette-material-design"
 @import "variables-palette-social"
+
 // THEME PALETTE – Site: Hoofbeats
 @import "variables-palette-hoofbeats"
 
@@ -71,6 +74,16 @@ $link-underline-light: hsla(0,0%,100%,0.3)
 $text-color:       $grey-900 !default
 $background-color: $green-50-lightened !default
 $brand-color:      $hoofbeats-green !default
+
+$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-sss: "Source Sans Pro", $font-sans
+$font-mont: "Montserrat", $font-sans
+$font-karla: "Karla", $font-sans
+
+$font-serif: "Georgia", Times, serif
+$font-arapey: "Arapey", $font-serif
+$font-playfair: "Playfair Display", $font-serif
+
 $base-font-family: $font-sss !default
 
 @import "variables-elements"

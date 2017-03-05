@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "hoofbeats",
+  "launch_path": "/index.html",
+  "description": "EBM for the masses",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Hoofbeats Health",
+    "url": "https://twitter.com/HoofbeatsHealth"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "hoofbeats",
+      "description": "EBM for the masses"
+    }
+  }
+}

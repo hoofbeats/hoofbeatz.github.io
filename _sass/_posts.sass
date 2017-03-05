@@ -1,16 +1,60 @@
-.post-header
-  margin-bottom: $spacing-unit
+.post-container
+  max-width: 48em
+  box-shadow: 0 $size1 $size3 rgba(0,0,0,.2), 0 $size1 0 rgba(255,255,255,0.9) inset
+  margin: 0 auto 0.75em
+  padding-bottom: 0 0 1.25em
+  overflow: hidden
 
-.post-title
-  font-size: 2.5rem
-  letter-spacing: -1px
-  line-height: 1
+#post-header
+  position: relative
+  margin: 0 0 0.25em
+  padding: 1em 1.25em 0.25em
+  //margin-bottom: $spacing-unit
+  //background-image: url()
+
+  .meta
+    position: absolute
+    right: 0
+    top: 1em
+    color: $grey-400
+    font:
+      family: $font-sss
+      size: 75%
+      weight: 300
+
+
+    .post-meta
+      background-color: $amber-400
+      color: white
+      border-radius: 0.5em
+      border: 0
+      padding: 0.1em 0.2em
+
+    //.post-date
+
+    .post-author
+      font-weight: 400
+
+  .post-title
+    font:
+      family: $font-playfair
+      size: 2.5rem
+      weight: 400
+    letter-spacing: -1px
+    line-height: 1
 
   @include media-query($on-laptop)
     font-size: 2.25rem
 
-.post-content
+#post-content
   margin-bottom: $spacing-unit
+
+  p::first-letter
+    font:
+      family: $font-arapey
+      size: 400%
+      margin-right: 0.5em
+      margin-bottom: 0.5em
 
   h2
     font-size: 2rem

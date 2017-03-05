@@ -6,19 +6,31 @@ site-tagline: MedEd for the masses
 site-quote: "When you hear Hoofbeats, think Horses, not Zebras."
 baseurl: ""
 url: "https://hoofbeats.github.io"
+repository: https://github.com/Hoofbeats/Hoofbeats.github.io
 twitter_username: HoofbeatsHealth
+instagram_username: HoofbeatsHealth
 github_username:  hoofbeats
+facebook_id: 1851416905098790
 
-# assets
-favicon: /assets/images/favicon.ico
+# Assets
+favicon: /images/favicon.ico
+logo-steth_title: /images/logo/hoof-steth_title.svg
+logo-title: /images/logo/hoofbeats-title.svg
 
-# build settings
+# Build settings
 collections:
   - graphics
+#    output: true
+#    permalink: /graphics/:path/
 
-excerpt_separator:  <!-- excerpt -->
-permalink:  pretty
-show_drafts:  false
+# Pagination
+# paginate: 6
+paginate_path: "/page:num/"
+
+excerpt_separator: <!-- excerpt -->
+permalink: pretty
+# permalink: /:year-:month-:day--:title/
+show_drafts: false
 markdown:  kramdown
 kramdown:
   parse_block_html:  true
@@ -31,6 +43,16 @@ sass:
 gems:
   - jekyll-feed
   - jekyll-seo-tag
+
+# gems: [jekyll-github-metadata, jekyll-paginate, jekyll-docs, jekyll-seo-tag, jekyll-feed]
+
+
+# Yeoman generators
+# jekyll-starter-kit, jekyll-webapp, jekyllrb, jekyllrb-gulp
+
+# Gemfile, Gemfile.lock
+# The Gemfile and Gemfile.lock files are used by Bundler to keep track of the gem dependencies to build your Jekyll site.
+
 
 exclude:
   - node_modules
@@ -59,4 +81,5 @@ exclude:
   - bower_components
   - _drafts
   - references
+  - resources
   - dev

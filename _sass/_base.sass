@@ -11,16 +11,20 @@ dl, dd, ol, ul, figure
   display: table
   clear: both
 
+// ROOT SETTINGS
+\*
+  font-size: 100%
+  box-sizing: border-box
+
 body
   //display: flex
   //justify-content: center
   //align-items: center
   background-color: $background-color
-  background-image: url(/assets/images/noise-grey_lt.png)
   color: $text-color
   font-family: $base-font-family
   font-weight: $base-font-weight
-  font-size: $base-font-size
+  font-size: 1rem
   line-height: $base-line-height
   -webkit-text-size-adjust: 100%
   -webkit-font-feature-settings: "kern" 1
@@ -53,11 +57,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm
-  margin-bottom: $rs
-
-// FLUID TYPOGRAPHY
-\:root
-  font-size: 100%
+  margin-bottom: 1rem
 
 img
   max-width: 100%
@@ -99,7 +99,10 @@ a
     text-decoration: underline
 
 blockquote
-  color: $grey-color
+  background-image: url(/images/blueprint-dark.png)
+  background-repeat: repeat
+  background-clip: border-box
+  color: rgba(0,0,0,0.1)
   border-left: 4px solid $grey-color-light
   padding-left: $spacing-unit / 2
   font-size: 18px
