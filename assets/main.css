@@ -395,35 +395,43 @@ cite {
   margin-left: 0;
   padding-right: 1em;
   padding-left: 0; }
+  @media screen and (min-width: 475px) {
+    /* line 19, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+    .right > #navbar {
+      padding-left: 5%; } }
 
-/* line 18, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+/* line 23, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
 .left {
   float: left;
   margin-right: 0;
   padding-left: 1em;
   padding-right: 0; }
+  @media screen and (min-width: 475px) {
+    /* line 29, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+    .left > #navbar {
+      padding-left: 5%; } }
 
-/* line 30, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+/* line 39, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
 .light {
   background: white;
   color: #272727; }
-  /* line 33, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+  /* line 42, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
   .light a {
     color: #272727; }
 
-/* line 36, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+/* line 45, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
 .dark {
   background-color: #424242;
   color: #fafafa; }
-  /* line 39, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+  /* line 48, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
   .dark a {
     color: #f5f5f5; }
 
-/* line 43, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+/* line 52, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
 .wrapper + footer {
   padding: 2em 0; }
 
-/* line 47, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
+/* line 56, /Volumes/64gb/sites/hoofbeats/_sass/_layout.sass */
 .page-heading {
   font-size: 1.5rem; }
 
@@ -527,7 +535,38 @@ amp-img, amp-youtube {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap; }
-  /* line 23, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+    /* line 23, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+    .site-header .container #navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-around; }
+      /* line 32, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+      .site-header .container #navbar button {
+        margin: 0;
+        padding: 1rem 0.2rem;
+        color: white;
+        background-color: transparent;
+        border: 0; }
+      /* line 39, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+      .site-header .container #navbar .page-link {
+        color: #f5f5f5;
+        line-height: 2.5;
+        text-decoration: none;
+        color: white;
+        margin: 0 auto;
+        padding: 1rem 0.2rem;
+        text-transform: uppercase;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.02em; }
+        /* line 52, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+        .site-header .container #navbar .page-link:hover {
+          text-decoration: none;
+          background-color: rgba(245, 245, 245, 0.8); }
+  /* line 81, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
   .site-header .site-title {
     background-image: url({{site.logo-steth_title}});
     background-clip: border-box;
@@ -538,55 +577,16 @@ amp-img, amp-youtube {
     margin-bottom: 0;
     margin: 0;
     padding: 0; }
-    /* line 46, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+    /* line 104, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
     .site-header .site-title, .site-header .site-title:visited {
       color: #89b68c; }
     @media screen and (min-width: 475px) {
-      /* line 23, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
+      /* line 81, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
       .site-header .site-title {
-        width: 20vw;
-        background-image: url({{site.logo-title}}); } }
-
-/* line 56, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
-.site-header #navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-  justify-content: space-around; }
-  /* line 65, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
-  .site-header #navbar button {
-    margin: 0;
-    padding: 1rem 0.2rem;
-    color: white;
-    background-color: transparent;
-    border: 0; }
-  /* line 72, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
-  .site-header #navbar .page-link {
-    color: #f5f5f5;
-    line-height: 2.5;
-    text-decoration: none;
-    color: white;
-    margin: 0 auto;
-    padding: 1rem 0.2rem;
-    text-transform: uppercase;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.02em; }
-    /* line 85, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
-    .site-header #navbar .page-link:hover {
-      text-decoration: none;
-      background-color: rgba(245, 245, 245, 0.8); }
-  @media screen and (max-width: 600px) {
-    /* line 114, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
-    .site-header #navbar .trigger {
-      clear: both;
-      display: none; }
-    /* line 118, /Volumes/64gb/sites/hoofbeats/_sass/_header.sass */
-    .site-header #navbar:hover .trigger {
-      display: block;
-      padding-bottom: 5px; } }
+        width: 18rem;
+        height: 3rem;
+        background-image: url({{site.logo-title}});
+        background-size: contain; } }
 
 /* line 1, /Volumes/64gb/sites/hoofbeats/_sass/_footer.sass */
 .site-footer {
