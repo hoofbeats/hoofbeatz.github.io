@@ -1,21 +1,48 @@
-<header class="site-header wrapper" role="banner">
+<amp-sidebar id="sidebar" layout="nodisplay" side="right">
+    <amp-img src="/img/ic_chevron_left_black_24dp_2x.png" width="32" height="32" alt="Close" on="tap:drawermenu.close" role="button" tabindex="0" style="width: 32px; height: 32px;"></amp-img>
+    <amp-accordion role="tablist">
+        <section>
+            <h4 class="-amp-accordion-header" role="tab">
+            <div class="show-more category"></div>
+            <div class="show-less category expanded"></div>
+          </h4>
+            <div class="-amp-accordion-content" role="tabpanel">
+                <div class="item">
+                    <a href=""></a>
+                </div>
+                <div class="item">
+                    <a href=""></a>
+                </div>
+            </div>
+        </section>
+    </amp-accordion>
+</amp-sidebar>
 
+<header class="site-header wrapper" role="banner">
   <div class="container right">
 
-    <nav class="site-nav">
-      {% for my_page in site.pages %}
-        {% if my_page.nav-display %}
-        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.nav-display | escape }}</a>
+    <a class="site-title" href="{{ "/" | relative_url}}"></a>
+
+    <nav id="navbar">
+      {% for page in site.pages %}
+        {% if page.navbar == 'display' %}
+        <a class="page-link" href="{{ page.url | relative_url }}">{{ page.navbar_display | escape }}</a>
         {% endif %}
       {% endfor %}
-
-      <span class="menu-icon">
-        {% include menu-hamburger.svg %}
-      </span>
-
-      <div class="trigger trigger-more"></div>
+      <button on="tap:sidebar.open">•••</button>
     </nav>
 
+        <!--<ul>
+            <li><a href="/shop/" class="page-link {% if page.url=="/shop/" %}active{% endif %}">Shop</a></li>
+            <li><a href="/blog/" class="page-link {% if page.url=="/blog/" %}active{% endif %}">Blog</a></li>
+            <li><a href="/graphics/" class="page-link {% if page.url=="/graphics/" %}active{% endif %}">Graphics</a></li>
+            <li><a href="/resources/" class="page-link {% if page.url=="/resources/" %}active{% endif %}">Resources</a></li>
+            <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+            <li>
+                <button on="tap:sidebar.open">•••</button>
+            </li>
+        </ul>
+      -->
   </div>
 
 </header>
